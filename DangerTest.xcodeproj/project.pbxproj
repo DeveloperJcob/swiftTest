@@ -77,7 +77,6 @@
 				2D76A6692394B421001C07DD /* Sources */,
 				2D76A66A2394B421001C07DD /* Frameworks */,
 				2D76A66B2394B421001C07DD /* Resources */,
-				2D7BD7EC2394C16C004E5426 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -133,27 +132,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		2D7BD7EC2394C16C004E5426 /* Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "#!/usr/bin/env bash\n# fail if any commands fails\nset -e\necho \"################### DANGER ######################\"\necho \"Install Danger\"\nif (brew outdated | grep package_name > /dev/null); then brew upgrade danger/tap/danger-swift; fi\n\necho \"Run danger\"\ndanger-swift ci\necho \"#################################################\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2D76A6692394B421001C07DD /* Sources */ = {
